@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        .lgin{                                                                       
+            width: 500px;
+            text-align: center;
+            margin: 100px auto 20px auto;
+            border: 3px solid;
+            background-color: antiquewhite;
+            color: rgb(71, 57, 40);
+            padding: 10px 10px 10px 10px;
+        }
+        .logsign{
+            padding: 20px;
+            display: block;
+        }
+        input[type="button"], input[type="submit"]{
+            padding: 5px 20px ;
+            border: 0px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            color: rgb(71, 57, 40);
+        }
+        input[type="text"], input[type="password"]{
+            padding: 10px;
+            border: 0px;
+            border-radius: 5px;
+        }
+        input[type="button"]:hover, input[type="submit"]:hover{
+            background-color: bisque;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body >
+    <div class="lgin">
+        <h2>LOGIN</h2>
+        <form id="login_form" onsubmit="submit_form()">
+            <h4>USERNAME</h4>
+            <input type="text" placeholder="Enter your email" name="username"/>
+            <h4>PASSWORD</h4>
+            <input type="password" placeholder="Enter your password" name="password"/>
+            <div class="logsign">
+                <input type="submit" value="Login" />
+                <input type="button" value="SignUp" onClick="create()" />
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function submit_form(){
+            alert("Login successfully");
+        }
+        function create(){
+            window.location="signup.html";
+        }
+    </script>
+</body>
+</html>
